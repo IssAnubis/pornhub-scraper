@@ -1,21 +1,18 @@
 {
-    "name": "Pornhub Scraper",
-    "description": "Scrapes video titles, images, and stream URLs from Pornhub",
-    "base_url": "https://www.pornhub.com/",
-    "search_url": "https://www.pornhub.com/video?search={query}",
-    "video_url": "https://www.pornhub.com/view_video.php?viewkey={viewkey}",
-    "parser": {
-        "searchResults": "./scraper.js",
-        "extractDetails": "./scraper.js",
-        "extractEpisodes": "./scraper.js",
-        "extractStreamUrl": "./scraper.js",
-        "cleanTitle": "./scraper.js"
-    },
-    "test_urls": {
-        "search": "https://www.pornhub.com/video?search=funny",
-        "video": "https://www.pornhub.com/view_video.php?viewkey=ph1234567890"
-    },
-    "version": "1.0.0",
-    "author": "Your Name",
-    "license": "MIT"
+   "sourceName": "Pornhub Scraper",
+   "iconUrl": "https://www.pornhub.com/favicon.ico",
+   "author": {
+       "name": "YourName",
+       "icon": "https://www.pornhub.com/favicon.ico"
+   },
+   "version": "1.0.0",
+   "language": "English (DUB)",
+   "streamType": "HLS",
+   "quality": "720p",
+   "baseUrl": "https://www.pornhub.com/",
+   "searchBaseUrl": "https://www.pornhub.com/video/search?search=%s",
+   "scriptUrl": "https://raw.githubusercontent.com/yourusername/your-repository/main/scraper.js",
+   "asyncJS": true,
+   "streamAsyncJS": false,
+   "softsub": false
 }
