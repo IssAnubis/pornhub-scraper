@@ -1,0 +1,94 @@
+{
+  "name": "Pornhub Scraper",
+  "author": "YourName",
+  "version": "1.0",
+  "description": "Scrapes video titles, URLs, thumbnails, and stream URLs from Pornhub.",
+  "homepage": "https://www.pornhub.com",
+  "patterns": [
+    "https://www.pornhub.com/*"
+  ],
+  "requests": {
+    "search": {
+      "url": "https://www.pornhub.com/video?search={query}",
+      "method": "GET"
+    },
+    "video_page": {
+      "url": "{video_url}",
+      "method": "GET"
+    }
+  },
+  "parsers": {
+    "search": {
+      "container": "div.phimage",
+      "fields": {
+        "title": {
+          "selector": "a.phimage-title",
+          "attribute": "title"
+        },
+        "url": {
+          "selector": "a.phimage-title",
+          "attribute": "href",
+          "base_url": "https://www.pornhub.com"
+        },
+        "thumbnail": {
+          "selector": "img.thumbnail-img",
+          "attribute": "src"
+        }
+      }
+    },
+    "video_page": {
+      "container": "div.wrap",
+      "fields": {
+        "description": {
+          "selector": "meta[name='description']",
+          "attribute": "content"
+        },
+        "aliases": {
+          "selector": "h1.title",
+          "attribute": "text"
+        },
+        "airdate": {
+          "selector": "div.textd + div.textc",
+          "attribute": "text"
+        },
+        "stream_url": {
+          "selector": "video source",
+          "attribute": "src"
+        }
+      }
+    },
+    "episodes": {
+      "container": "a.episode-link",
+      "fields": {
+        "episode_url": {
+          "selector": "a",
+          "attribute": "href",
+          "base_url": "https://www.pornhub.com"
+        }
+      }
+    }
+  },
+  "output": {
+    "format": "json",
+    "structure": {
+      "search_results": [
+        {
+          "title": "{title}",
+          "url": "{url}",
+          "thumbnail": "{thumbnail}"
+        }
+      ],
+      "video_details": {
+        "description": "{description}",
+        "aliases": "{aliases}",
+        "airdate": "{airdate}",
+        "stream_url": "{stream_url}"
+      },
+      "episodes": [
+        {
+          "episode_url": "{episode_url}"
+        }
+      ]
+    }
+  }
+}
