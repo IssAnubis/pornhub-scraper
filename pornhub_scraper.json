@@ -1,17 +1,17 @@
 {
-   "sourceName": "Pornhub Scraper",
-   "iconUrl": "https://www.pornhub.com/favicon.ico",
+   "sourceName": "HentaiHaven Scraper",
+   "iconUrl": "https://hentaihaven.xxx/favicon.ico",
    "author": {
        "name": "YourName",
-       "icon": "https://www.pornhub.com/favicon.ico"
+       "icon": "https://hentaihaven.xxx/favicon.ico"
    },
    "version": "1.0.0",
    "language": "English (DUB)",
    "streamType": "HLS",
    "quality": "720p",
-   "baseUrl": "https://www.pornhub.com/",
-   "searchBaseUrl": "https://www.pornhub.com/video/search?search=%s",
-   "scriptUrl": "https://raw.githubusercontent.com/yourusername/your-repository/main/scraper.js",
+   "baseUrl": "https://hentaihaven.xxx/",
+   "searchBaseUrl": "https://hentaihaven.xxx/search/%s/",
+   "scriptUrl": "https://raw.githubusercontent.com/yourusername/your-repository/main/hentaihaven.js",
    "asyncJS": true,
    "streamAsyncJS": false,
    "softsub": false
