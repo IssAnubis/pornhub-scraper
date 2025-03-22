@@ -1,0 +1,18 @@
+{
+   "sourceName": "HentaiHaven Scraper",
+   "iconUrl": "https://hentaihaven.xxx/favicon.ico",
+   "author": {
+       "name": "YourName",
+       "icon": "https://hentaihaven.xxx/favicon.ico"
+   },
+   "version": "1.0.0",
+   "language": "Japanese (SUB)",
+   "streamType": "HLS",
+   "quality": "720p",
+   "baseUrl": "https://hentaihaven.xxx/",
+   "searchBaseUrl": "https://hentaihaven.xxx/search/%s/",
+   "scriptUrl": "https://raw.githubusercontent.com/yourusername/your-repository/main/hentaihaven.js",
+   "asyncJS": true,
+   "streamAsyncJS": false,
+   "softsub": false
+}
